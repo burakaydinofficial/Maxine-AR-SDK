@@ -110,3 +110,8 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
 
 set(ENABLE_SAMPLES TRUE)
 add_subdirectory(samples)
+
+option(BUILD_BRIDGE "Build the nvar_bridge flat C wrapper library" OFF)
+if(BUILD_BRIDGE)
+    add_subdirectory(bridge)
+endif()
